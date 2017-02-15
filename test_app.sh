@@ -1,26 +1,23 @@
 #!/bin/bash
 # Proper header for a Bash script.
 
-APP_DB_NAME_DEV='rubymn_dev'
-APP_DB_NAME_TEST='rubymn_test'
-APP_DB_USER='rubymn_user'
-APP_DB_PASS='rubymn_password'
-
-# Set up PostgreSQL
-echo '---------------------'
-echo 'Setting up PostgreSQL'
-
-sudo -u postgres psql -c"CREATE ROLE $APP_DB_USER WITH CREATEDB LOGIN PASSWORD '$APP_DB_PASS';"
-sudo -u postgres psql -c"CREATE DATABASE $APP_DB_NAME_DEV WITH OWNER=$APP_DB_USER;"
-sudo -u postgres psql -c"CREATE DATABASE $APP_DB_NAME_TEST WITH OWNER=$APP_DB_USER;"
+sh pg-start.sh
 
 echo '--------------'
 echo 'bundle install'
 bundle install
 
+sh kill_spring.sh
+
 echo '---------------------------'
 echo 'bundle exec rake db:migrate'
 bundle exec rake db:migrate
+
+echo '-----------------'
+echo 'sh kill_spring.sh'
+sh kill_spring.sh
+
+echo "\n\n\n\n\n\n\n\n\n\n"
 
 echo '---------------------'
 echo 'bundle exec rake test'

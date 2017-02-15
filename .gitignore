@@ -21,3 +21,6 @@ gemsurance_report.html
 
 # Ignore the gems in vendor/cache (too much source code bloat)
 vendor/cache
+
+# Ignore application configuration
+/config/application.yml

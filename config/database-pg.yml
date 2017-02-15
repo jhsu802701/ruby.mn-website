@@ -10,17 +10,17 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
-  username: <%= ENV['var_db_rubymn_username'] %>
-  password: <%= ENV['var_db_rubymn_password'] %>
+  username: <%= ENV['VAR_STORE_USERNAME'] %>
+  password: <%= ENV['VAR_STORE_PASSWORD'] %>
 
 development:
   <<: *default
-  database: db_rubymn_dev
+  database: DB_NAME_DEV
 
 test:
   <<: *default
-  database: db_rubymn_test
+  database: DB_NAME_TEST
 
 production:
   <<: *default
-  database: db_rubymn_pro
+  database: DB_NAME_PRO
