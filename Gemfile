@@ -64,17 +64,16 @@ group :development, :test do
 
   # ADDITION: ANNOTATE
   gem 'annotate'
-
-  # ADDITIONS: code checking
-  gem 'sandi_meter'
-  gem 'brakeman'
-  # gem 'guard-brakeman'
-  gem 'bundler-audit'
-  # gem 'guard-bundler-audit'
-
-  # ADDITION: GEMSURANCE
-  gem 'gemsurance'
 end
+
+# BEGIN: gems used in test_code.sh script
+group :development, :testing do
+  gem 'brakeman' # Checks for security vulnerabilities
+  gem 'bundler-audit' # Checks for vulnerable versions of gems
+  gem 'gemsurance' # Checks for outdated and insecure gems
+  gem 'sandi_meter' # Checks for compliance with Sandi Metz' four rules
+end
+# END: gems used in test_code.sh script
 
 # BEGIN: gems used for setting up PostgreSQL in the development environment
 # NOTE: Attempts to use "gem install" in the PostgreSQL setup scripts did not pan out.

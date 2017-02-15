@@ -1,23 +1,34 @@
 #!/bin/bash
-# Proper header for a Bash script.
 
-echo '--------------'
-echo 'bundle install'
-bundle install
+# This script runs the app through code metrics.
+# Violations will not stop the app from passing but will be flagged here.
 
-echo '----------------'
-echo 'brakeman -Aq -w2'
-brakeman -Aq -w2
+echo '--------------------------'
+echo 'bundle install > /dev/null'
+bundle install > /dev/null
 
-echo '-----------'
-echo 'sandi_meter'
-sandi_meter
+# -A: runs all checks
+# -q: output the report only; suppress information warnings
+# -w2: level 2 warnings (medium and high only)
+echo '----------------------------'
+echo 'bundle exec brakeman -Aq -w2'
+bundle exec brakeman -Aq -w2
 
-echo '------------'
-echo 'bundle-audit'
-bundle-audit
+echo '-----------------------'
+echo 'bundle exec sandi_meter'
+bundle exec sandi_meter
 
-echo '----------'
-echo 'gemsurance'
-gemsurance
-echo 'The Gemsurance Report is in gemsurance_report.html in the root directory.'
+# Update the local ruby-advisory-db advisory database
+echo '-------------------------------'
+echo 'bundle exec bundle-audit update'
+bundle exec bundle-audit update
+
+# Audit the gems listed in Gemfile.lock
+echo '------------------------'
+echo 'bundle exec bundle-audit'
+bundle exec bundle-audit
+
+echo '----------------------------------------------------------'
+echo 'bundle exec gemsurance --output log/gemsurance_report.html'
+bundle exec gemsurance --output log/gemsurance_report.html
+echo 'The Gemsurance Report is at log/gemsurance_report.html .'
