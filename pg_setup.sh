@@ -53,6 +53,10 @@ echo "Password: ${db_password}"
 
 sh pg-start.sh
 
+echo '--------------'
+echo 'bundle install'
+bundle install
+
 ruby pg_setup.rb $db_dev $db_test $db_pro $env_var_username $env_var_password $db_username $db_password
 
 sh git_check.sh
