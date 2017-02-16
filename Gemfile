@@ -57,14 +57,13 @@ group :production do
   gem 'memcachier',   '0.0.2'
 end
 
-group :development, :test do
-  # ADDITION: DIAGRAMS
-  gem 'rails-erd'
-  gem 'railroady'
-
-  # ADDITION: ANNOTATE
-  gem 'annotate'
+# BEGIN: for outline.sh
+group :development do
+  gem 'annotate' # Adds comments listing parameters and the output of "rails routes"
+  gem 'railroady' # Generates block diagrams
+  gem 'rails-erd' # Generates block diagrams
 end
+# END: for outline.sh
 
 # BEGIN: gems used in test_code.sh script
 group :development, :testing do
