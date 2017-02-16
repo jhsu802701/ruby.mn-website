@@ -52,9 +52,9 @@ group :test do
 end
 
 group :test, :development do
-  gem 'faker'
-  gem 'progress_bar',       '~> 0.4.0'
-  gem 'factory_girl_rails', '~> 1.5.0'
+  gem 'faker', '1.2.0'
+  gem 'progress_bar', '0.4.1'
+  gem 'factory_girl_rails', '1.5.0'
 end
 
 group :production do
