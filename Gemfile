@@ -18,21 +18,21 @@ group :assets do
   gem 'compass-rails', '1.1.3'
 end
 
-gem 'sass-rails',   '~> 3.2'
+gem 'sass-rails', '3.2.6'
 
-gem 'jquery-rails', '~> 3.1.3'
-#gem "ruby-recaptcha", '~> 1.0.3', :require => 'recaptcha'
-gem "recaptcha",      '~> 0.3.1', :require => "recaptcha/rails"
-gem "haml"
-gem 'haml-rails'
-gem 'rdiscount'
-gem "paperclip", '~> 4.3.1'
-gem 'rails_autolink', '~> 1.0.4'
-gem 'dynamic_form',   '~> 1.1.4'
-gem 'gravatarify',    '~> 3.0.0'
-gem 'kaminari',       '~> 0.13.0'
-gem 'chronic',        '~> 0.9.1'
-gem 'unicorn'
+gem 'jquery-rails', '3.1.4'
+# gem "ruby-recaptcha", '~> 1.0.3', :require => 'recaptcha'
+gem "recaptcha", '0.3.6', :require => "recaptcha/rails"
+gem "haml", '4.0.5'
+gem 'haml-rails', '0.4'
+gem 'rdiscount', '2.1.7'
+gem "paperclip", '4.3.1'
+gem 'rails_autolink', '1.0.9'
+gem 'dynamic_form', '1.1.4'
+gem 'gravatarify', '3.0.0'
+gem 'kaminari', '0.13.0'
+gem 'chronic', '0.9.1'
+gem 'unicorn', '5.0.1'
 
 group :development do
   gem 'rails3-generators', '0.17.4'
