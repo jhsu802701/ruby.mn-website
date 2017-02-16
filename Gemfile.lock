@@ -145,7 +145,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
-    pg (0.17.1)
+    pg (0.19.0)
     polyglot (0.3.5)
     progress_bar (0.4.1)
       highline (~> 1.6.1)
@@ -270,7 +270,7 @@ DEPENDENCIES
   memcachier (= 0.0.2)
   mocha (= 1.0.0)
   paperclip (= 4.3.1)
-  pg (= 0.17.1)
+  pg (= 0.19.0)
   progress_bar (= 0.4.1)
   rack-cache (= 1.6.1)
   rack-contrib (= 1.1.0)
