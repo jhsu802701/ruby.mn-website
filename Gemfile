@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.22'
-gem 'pg'
+##############################################
+# BEGIN: gems that take a long time to install
+##############################################
+# Please pre-install the proper versions in the Docker image.
+gem 'rails', '3.2.22.1'
+gem 'pg', '0.17.1'
+############################################
+# END: gems that take a long time to install
+############################################
 
 # Gems used only for assets and not required
 # in production environments by default.
