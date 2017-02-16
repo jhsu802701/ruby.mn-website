@@ -41,6 +41,8 @@ end
 
 group :test do
   gem 'shoulda', '3.0.1'
+  gem 'shoulda-context', '1.0.2'
+  gem 'shoulda-matchers', '1.0.0'
   gem 'test-unit', '2.4.9'
   gem 'mocha', '1.0.0'
   gem 'rdoc', '3.12.2'
