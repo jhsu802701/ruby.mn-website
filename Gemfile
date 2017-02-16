@@ -66,25 +66,25 @@ end
 
 # BEGIN: for outline.sh
 group :development do
-  gem 'annotate' # Adds comments listing parameters and the output of "rails routes"
-  gem 'railroady' # Generates block diagrams
-  gem 'rails-erd' # Generates block diagrams
+  gem 'annotate', '2.6.5' # Adds comments listing parameters and the output of "rails routes"
+  gem 'railroady', '1.3.1' # Generates block diagrams
+  gem 'rails-erd', '1.4.2' # Generates block diagrams
 end
 # END: for outline.sh
 
 # BEGIN: gems used in test_code.sh script
 group :development, :testing do
-  gem 'brakeman' # Checks for security vulnerabilities
-  gem 'bundler-audit' # Checks for vulnerable versions of gems
-  gem 'gemsurance' # Checks for outdated and insecure gems
-  gem 'sandi_meter' # Checks for compliance with Sandi Metz' four rules
+  gem 'brakeman', '3.1.0' # Checks for security vulnerabilities
+  gem 'bundler-audit', '0.3.0' # Checks for vulnerable versions of gems
+  gem 'gemsurance', '0.6.0' # Checks for outdated and insecure gems
+  gem 'sandi_meter', '1.2.0' # Checks for compliance with Sandi Metz' four rules
 end
 # END: gems used in test_code.sh script
 
 # BEGIN: gems used for setting up PostgreSQL in the development environment
 # NOTE: Attempts to use "gem install" in the PostgreSQL setup scripts did not pan out.
-gem 'figaro'
-gem 'line_containing'
-gem 'remove_double_blank'
-gem 'string_in_file'
+gem 'figaro', '1.1.1'
+gem 'line_containing', '0.1.0'
+gem 'remove_double_blank', '0.0.0'
+gem 'string_in_file', '0.1.2'
 # END: gems used for setting up PostgreSQL in the development environment
