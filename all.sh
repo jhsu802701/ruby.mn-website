@@ -6,12 +6,6 @@ clear
 
 sh test_app.sh
 
-FILE_LOG_TEST_CODE='log/all-test_code.log'
-echo '-------------------------------------'
-echo "sh test_code.sh > $FILE_LOG_TEST_CODE"
-sh test_code.sh > $FILE_LOG_TEST_CODE
-echo 'The Gemsurance Report is at log/gemsurance_report.html .'
-
 FILE_LOG_OUTLINE='log/all-outline.log'
 echo '---------------------------------'
 echo "sh outline.sh > $FILE_LOG_OUTLINE"
@@ -26,3 +20,14 @@ echo $d_mo
 echo $d_co
 echo $d_gems
 echo 'Directory trees are in the notes directory.'
+
+FILE_LOG_SEED='log/all-seed.log'
+echo '---------------------------'
+echo "sh seed.sh > $FILE_LOG_SEED"
+sh seed.sh > $FILE_LOG_SEED
+
+FILE_LOG_TEST_CODE='log/all-test_code.log'
+echo '-------------------------------------'
+echo "sh test_code.sh > $FILE_LOG_TEST_CODE"
+sh test_code.sh > $FILE_LOG_TEST_CODE
+echo 'The Gemsurance Report is at log/gemsurance_report.html .'

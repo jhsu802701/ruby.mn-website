@@ -1,5 +1,11 @@
 #!/bin/bash
-# Proper header for a Bash script.
 
-rake db:migrate:reset
-rake db:seed
+sh pg-start.sh
+
+echo '---------------------------------'
+echo 'bundle exec rake db:migrate:reset'
+bundle exec rake db:migrate:reset
+
+echo '------------------------'
+echo 'bundle exec rake db:seed'
+bundle exec rake db:seed
