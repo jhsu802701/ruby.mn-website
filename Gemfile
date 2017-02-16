@@ -40,15 +40,15 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda',            '~> 3.0.1'
-  gem 'test-unit',          '~> 2.4.8'
-  gem 'mocha',              '~> 1.0.0'
-  gem 'rdoc'
-  gem 'rb-fsevent',         '~> 0.9.3', :require => false
-  gem 'rb-fchange',         '~> 0.0.5', :require => false
-  gem 'guard',              '~> 0.6.1'
-  gem 'guard-test',         '~> 0.3.0'
-  gem 'guard-bundler',      '~> 0.1.3'
+  gem 'shoulda', '3.0.1'
+  gem 'test-unit', '2.4.9'
+  gem 'mocha', '1.0.0'
+  gem 'rdoc', '3.12.2'
+  gem 'rb-fsevent', '0.9.4', :require => false
+  gem 'rb-fchange', '0.0.6', :require => false
+  gem 'guard', '0.6.3'
+  gem 'guard-test', '0.3.0'
+  gem 'guard-bundler', '0.1.3'
 end
 
 group :test, :development do
