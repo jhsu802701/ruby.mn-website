@@ -256,7 +256,7 @@ DEPENDENCIES
   factory_girl_rails (= 1.5.0)
   faker (= 1.2.0)
   figaro (= 1.1.1)
-  foreman
+  foreman (= 0.63.0)
   gemsurance (= 0.6.0)
   gravatarify (~> 3.0.0)
   guard (~> 0.6.1)

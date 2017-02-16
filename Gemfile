@@ -35,8 +35,8 @@ gem 'chronic',        '~> 0.9.1'
 gem 'unicorn'
 
 group :development do
-  gem 'rails3-generators',  '0.17.4'
-  gem 'foreman'
+  gem 'rails3-generators', '0.17.4'
+  gem 'foreman', '0.63.0'
 end
 
 group :test do
